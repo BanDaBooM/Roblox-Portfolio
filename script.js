@@ -96,23 +96,23 @@
     });
   }
 
-  const floopaFacts = [
-    "Floopa was first spotted near neon biomes.",
-    "Floopa hums at low frequencies when happy.",
-    "A playful floopa can cheer up a whole build team.",
-    "Floopa likes small shiny objects and colorful pelmeni.",
-    "Some floopa are collectors of tiny model parts."
+  const floppaFacts = [
+    "Floppa was first spotted near neon biomes.",
+    "Floppa hums at low frequencies when happy.",
+    "A playful floppa can cheer up a whole build team.",
+    "Floppa likes small shiny objects and colorful pelmeni.",
+    "Some floppa are collectors of tiny model parts."
   ];
 
-  const floopaFactElement = document.getElementById("floopaFact");
-  const floopaMemeLineElement = document.getElementById("floopaMemeLine");
-  const newFloopaBtn = document.getElementById("newFloopaBtn");
-  const floopaMemeBtn = document.getElementById("floopaMemeBtn");
+  const floppaFactElement = document.getElementById("floppaFact");
+  const floppaMemeLineElement = document.getElementById("floppaMemeLine");
+  const newFloppaBtn = document.getElementById("newFloppaBtn");
+  const floppaMemeBtn = document.getElementById("floppaMemeBtn");
   const seaModeBtn = document.getElementById("seaModeBtn");
   const easterEgg = document.getElementById("easterEgg");
 
   function randomFact() {
-    return floopaFacts[Math.floor(Math.random() * floopaFacts.length)];
+    return floppaFacts[Math.floor(Math.random() * floppaFacts.length)];
   }
 
   function showToast(message) {
@@ -124,33 +124,33 @@
     }, 1800);
   }
 
-  if (floopaFactElement) {
-    floopaFactElement.textContent = randomFact();
+  if (floppaFactElement) {
+    floppaFactElement.textContent = randomFact();
   }
 
-  if (newFloopaBtn && floopaFactElement) {
-    newFloopaBtn.addEventListener("click", function () {
-      floopaFactElement.textContent = randomFact();
-      showToast("Fresh floopa fact loaded.");
+  if (newFloppaBtn && floppaFactElement) {
+    newFloppaBtn.addEventListener("click", function () {
+      floppaFactElement.textContent = randomFact();
+      showToast("Fresh floppa fact loaded.");
     });
   }
 
-  const floopaMemes = [
-    "Floopa mode: ON. Builds: POG.",
-    "Model review approved by the Council of Floopa.",
-    "If it renders, the floopa nods.",
-    "Pelmeni + floopa playlist = +20 modeling speed.",
+  const floppaMemes = [
+    "Floppa mode: ON. Builds: POG.",
+    "Model review approved by the Council of Floppa.",
+    "If it renders, the floppa nods.",
+    "Pelmeni + floppa playlist = +20 modeling speed.",
     "Export first, panic never."
   ];
 
-  if (floopaMemeLineElement) {
-    floopaMemeLineElement.textContent = floopaMemes[0];
+  if (floppaMemeLineElement) {
+    floppaMemeLineElement.textContent = floppaMemes[0];
   }
 
-  if (floopaMemeBtn && floopaMemeLineElement) {
-    floopaMemeBtn.addEventListener("click", function () {
-      const randomIndex = Math.floor(Math.random() * floopaMemes.length);
-      floopaMemeLineElement.textContent = floopaMemes[randomIndex];
+  if (floppaMemeBtn && floppaMemeLineElement) {
+    floppaMemeBtn.addEventListener("click", function () {
+      const randomIndex = Math.floor(Math.random() * floppaMemes.length);
+      floppaMemeLineElement.textContent = floppaMemes[randomIndex];
       showToast("New meme line delivered.");
     });
   }
@@ -171,8 +171,8 @@
   let keyBuffer = "";
   window.addEventListener("keydown", function (event) {
     keyBuffer = (keyBuffer + event.key.toLowerCase()).slice(-6);
-    if (keyBuffer === "floopa") {
-      showToast("Floopa combo unlocked.");
+    if (keyBuffer === "floppa") {
+      showToast("Floppa combo unlocked.");
     }
   });
 })();

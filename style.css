@@ -391,25 +391,25 @@ p {
   font-size: 0.85rem;
 }
 
-.floopa-panel {
+.floppa-panel {
   background: linear-gradient(145deg, var(--surface), var(--surface-2));
-  border: 1px solid var(--border);
+.  border: 1px solid var(--border);
   border-radius: 18px;
   padding: 1rem;
   box-shadow: var(--shadow);
 }
 
-.floopa-fact {
+.floppa-fact {
   margin-top: 0;
 }
 
-.floopa-meme {
+.floppa-meme {
   margin-top: 0.2rem;
   color: var(--accent-soft);
   font-size: 0.95rem;
 }
 
-.floopa-actions {
+.floppa-actions {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
