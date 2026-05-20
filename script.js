@@ -108,7 +108,6 @@
   const floppaMemeLineElement = document.getElementById("floppaMemeLine");
   const newFloppaBtn = document.getElementById("newFloppaBtn");
   const floppaMemeBtn = document.getElementById("floppaMemeBtn");
-  const seaModeBtn = document.getElementById("seaModeBtn");
   const easterEgg = document.getElementById("easterEgg");
 
   function randomFact() {
@@ -155,18 +154,7 @@
     });
   }
 
-  const storedSeaMode = window.localStorage.getItem("deepSeaMode") === "1";
-  if (storedSeaMode) {
-    document.body.classList.add("deep-mode");
-  }
-
-  if (seaModeBtn) {
-    seaModeBtn.addEventListener("click", function () {
-      const enabled = document.body.classList.toggle("deep-mode");
-      window.localStorage.setItem("deepSeaMode", enabled ? "1" : "0");
-      showToast(enabled ? "Deep Sea Mode enabled." : "Deep Sea Mode disabled.");
-    });
-  }
+  // Deep mode removed — no persistent state or toggle
 
   let keyBuffer = "";
   window.addEventListener("keydown", function (event) {
