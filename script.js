@@ -1,5 +1,5 @@
 ﻿(function () {
-  const birthDate = new Date(2009, 3, 25);
+  const birthDate = new Date(2009, 6, 1);
   const now = new Date();
 
   let age = now.getFullYear() - birthDate.getFullYear();
@@ -96,23 +96,23 @@
     });
   }
 
-  const sharkFacts = [
-    "Sharks existed before dinosaurs.",
-    "Some sharks can sense tiny electric signals from prey.",
-    "A group of sharks can be called a shiver.",
-    "Not all sharks are huge. Some are small enough to fit in your hand.",
-    "Many sharks need to keep swimming to breathe efficiently."
+  const floopaFacts = [
+    "Floopa was first spotted near neon biomes.",
+    "Floopa hums at low frequencies when happy.",
+    "A playful floopa can cheer up a whole build team.",
+    "Floopa likes small shiny objects and colorful pelmeni.",
+    "Some floopa are collectors of tiny model parts."
   ];
 
-  const sharkFactElement = document.getElementById("sharkFact");
-  const sharkMemeLineElement = document.getElementById("sharkMemeLine");
-  const newFactBtn = document.getElementById("newFactBtn");
-  const memeBtn = document.getElementById("memeBtn");
+  const floopaFactElement = document.getElementById("floopaFact");
+  const floopaMemeLineElement = document.getElementById("floopaMemeLine");
+  const newFloopaBtn = document.getElementById("newFloopaBtn");
+  const floopaMemeBtn = document.getElementById("floopaMemeBtn");
   const seaModeBtn = document.getElementById("seaModeBtn");
   const easterEgg = document.getElementById("easterEgg");
 
   function randomFact() {
-    return sharkFacts[Math.floor(Math.random() * sharkFacts.length)];
+    return floopaFacts[Math.floor(Math.random() * floopaFacts.length)];
   }
 
   function showToast(message) {
@@ -124,33 +124,33 @@
     }, 1800);
   }
 
-  if (sharkFactElement) {
-    sharkFactElement.textContent = randomFact();
+  if (floopaFactElement) {
+    floopaFactElement.textContent = randomFact();
   }
 
-  if (newFactBtn && sharkFactElement) {
-    newFactBtn.addEventListener("click", function () {
-      sharkFactElement.textContent = randomFact();
-      showToast("Fresh shark fact loaded.");
+  if (newFloopaBtn && floopaFactElement) {
+    newFloopaBtn.addEventListener("click", function () {
+      floopaFactElement.textContent = randomFact();
+      showToast("Fresh floopa fact loaded.");
     });
   }
 
-  const sharkMemes = [
-    "Shark mode: ON. Bugs: OFF (hopefully).",
-    "Code review approved by the Council of Sharks.",
-    "If it compiles, the shark smiles.",
-    "Coffee + shark playlist = +20 coding speed.",
-    "Deploy first, panic never."
+  const floopaMemes = [
+    "Floopa mode: ON. Builds: POG.",
+    "Model review approved by the Council of Floopa.",
+    "If it renders, the floopa nods.",
+    "Pelmeni + floopa playlist = +20 modeling speed.",
+    "Export first, panic never."
   ];
 
-  if (sharkMemeLineElement) {
-    sharkMemeLineElement.textContent = sharkMemes[0];
+  if (floopaMemeLineElement) {
+    floopaMemeLineElement.textContent = floopaMemes[0];
   }
 
-  if (memeBtn && sharkMemeLineElement) {
-    memeBtn.addEventListener("click", function () {
-      const randomIndex = Math.floor(Math.random() * sharkMemes.length);
-      sharkMemeLineElement.textContent = sharkMemes[randomIndex];
+  if (floopaMemeBtn && floopaMemeLineElement) {
+    floopaMemeBtn.addEventListener("click", function () {
+      const randomIndex = Math.floor(Math.random() * floopaMemes.length);
+      floopaMemeLineElement.textContent = floopaMemes[randomIndex];
       showToast("New meme line delivered.");
     });
   }
@@ -170,9 +170,9 @@
 
   let keyBuffer = "";
   window.addEventListener("keydown", function (event) {
-    keyBuffer = (keyBuffer + event.key.toLowerCase()).slice(-5);
-    if (keyBuffer === "shark") {
-      showToast("Shark combo unlocked.");
+    keyBuffer = (keyBuffer + event.key.toLowerCase()).slice(-6);
+    if (keyBuffer === "floopa") {
+      showToast("Floopa combo unlocked.");
     }
   });
 })();
